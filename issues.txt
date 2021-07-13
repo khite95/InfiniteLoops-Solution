@@ -1,0 +1,41 @@
+IL-0001 Cannot Add Items to Cart
+
+Users are being shown a cryptic error message each time they click
+"Add To Cart." This happens for every item shown under 'Available Loops.'
+
+This trace appears in my console:
+TypeError: t.getProductById(...) is undefined
+    Z ShoppingCartPreview.vue:1
+
+
+Expected:
+1. As a User, I should be able to add items to my cart
+2. Items in my cart should be displayed when I click the
+shopping cart icon in the header
+
+
+
+IL-0002 Total Is not Properly Formatted in Shopping Cart
+
+Users are reporting that occasionally, the total shown has more than
+two decimal values (See IL0002.png)
+
+Expected:
+1. As a User, when my cart is not empty, I should see the total value
+in my Shopping Cart Component
+2. The Total value shown should have exactly two decimal places (for cents)
+
+
+
+IL-0003 Unable to Create Order "Missing Email"
+
+Users are reporting that they cannot complete their order, with items
+in their shopping carts.
+
+They are shown a notice that their oder is being created, but upon further
+inspection, they are receiving a 400 Bad Request from `/api/v1/orders`
+
+"Unable to create order. Missing email"
+
+Most of the affected users have confirmed that they _did_ include an email
+address. We have been able to reproduce reliably on our end.
