@@ -45,10 +45,7 @@
 
 				return Object.keys(computed.cart).reduce((total, id) => {
 					let itemCount = computed.cart[id].itemCount || 0
-					// console.log(`item count: ${itemCount}`)
 					let price = computed.getProductById(id)[0].price || 0
-					// console.log(`price: ${price}`)
-					// console.log(`total: ${total}`)
 
 					// Fix for floating point errors
 					return ((total * 100 + (itemCount * price) * 100) / 100).toFixed(2)

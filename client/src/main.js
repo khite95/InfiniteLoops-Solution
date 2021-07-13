@@ -119,10 +119,6 @@ const store = new Vuex.Store({
 				}, 3000)
 			}
 
-			// console.log(`Product ${product}`)
-			// let p = JSON.stringify(product);
-			// console.log(`Product stringify ${p}`)
-
 			console.log(`addToCart ${productId}`)
 
 			context.commit('addProductToCart', productId)	
